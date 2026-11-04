@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI - Tour 360 da Oficina Elétrica</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0f172a; }
+    .tour-frame {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+    .btn-voltar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background-color: #164194;
+      color: #ffffff;
+      border: 2px solid #E84910;
+      padding: 10px 20px;
+      font-family: sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-voltar:hover { background-color: #E84910; border-color: #164194; }
+  </style>
+</head>
+<body>
+ 
+  <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
+ 
+  <iframe class="tour-frame"
+          src="https://kuula.co/share/collection/7dJlD?logo=1&info=1&fs=1&vr=0&thumbs=1&inst=0-"
+          title="Tour virtual 360 da Oficina Elétrica"
+          allowfullscreen
+          allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer"></iframe>
+ 
+</body>
+</html>
+
