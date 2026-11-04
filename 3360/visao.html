@@ -2,30 +2,17 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>SENAI - Oficina 360</title>
-  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SENAI - Tour 360 da Oficina Elétrica</title>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-    }
-    .iframe-container {
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0f172a; }
+    .tour-frame {
       position: absolute;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: 1;
       border: none;
-    }
-    a-scene {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: 2;
-      pointer-events: none;
     }
     .btn-voltar {
       position: fixed;
@@ -41,44 +28,22 @@
       text-decoration: none;
       border-radius: 4px;
       cursor: pointer;
-      pointer-events: auto;
     }
-    .btn-voltar:hover {
-      background-color: #E84910;
-      border-color: #164194;
-    }
+    .btn-voltar:hover { background-color: #E84910; border-color: #164194; }
   </style>
-  <script>
-    AFRAME.registerComponent('abre-video', {
-      init: function () {
-        const video = document.querySelector('#vid');
-        const tela = document.querySelector('#tela-video');
-        this.el.addEventListener('click', () => {
-          tela.setAttribute('visible', true);
-          if(video) video.play();
-        });
-      }
-    });
-  </script>
 </head>
 <body>
-
+ 
   <a href="index.html" class="btn-voltar">← Voltar ao Início</a>
-
-  <iframe class="iframe-container" src="https://kuula.co/share/collection/7dJlD?logo=1&info=1&fs=1&vr=0&thumbs=1&inst=0-" allowfullscreen allow="xr-spatial-tracking"></iframe>
-
-  <a-scene embedded vr-mode-ui="enabled: false">
-    <a-assets>
-
-      <video id="vid" src="video-grupo.mp4" preload="auto" loop="true" crossorigin="anonymous"></video>
-    </a-assets>
-
-    <a-video id="tela-video" src="#vid" position="0 2.2 -3"
-             width="3" height="1.7" visible="false"></a-video>
-    
-      <a-cursor fuse="true" fuse-timeout="1500" raycaster="objects: .clicavel" color="#164194"></a-cursor>
-    
-  </a-scene>
-
+ 
+  <iframe class="tour-frame"
+          src="https://kuula.co/share/collection/7dJlD?logo=1&info=1&fs=1&vr=1&thumbs=1&inst=0-"
+          title="Tour virtual 360 da Oficina Elétrica"
+          allowfullscreen
+          allow="fullscreen; xr-spatial-tracking; gyroscope; accelerometer"></iframe>
+ 
 </body>
 </html>
+ 
+ 
+Claude terminou a resposta
